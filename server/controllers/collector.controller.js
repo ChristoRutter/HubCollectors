@@ -6,13 +6,13 @@ module.exports = {
 
     findAllCollector: (req, res) =>{
         Collector.find()
-            .populate("createdBy", "username email")
-            .then((allGames)=>{
-                res.json(allGames);
+            // .populate("createdBy", "username")
+            .then((allCollect)=>{
+                res.json(allCollect);
             })
             .catch((err)=>{
                 console.log("Find All failed");
-                res.json({message: "Something went wrong", error: err})
+                res.json({message: "Something went wrong in find all", error: err})
             })
     },
 

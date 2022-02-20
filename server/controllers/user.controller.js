@@ -24,7 +24,7 @@ module.exports = {
     },
 
     login: (req, res)=>{
-        User.findOne({email: req.body.email})
+        User.findOne({username: req.body.username})
             .then((userRecord)=>{
             //check if this returned obj is null
                 if(userRecord === null){
@@ -42,7 +42,6 @@ module.exports = {
                                     jwt.sign(
                                         {
                                             id: userRecord._id,
-                                            email: userRecord.email,
                                             username: userRecord.username
                                         },
                                         process.env.JWT_SECRET

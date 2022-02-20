@@ -7,7 +7,7 @@
     
         app.post("/api/collectors", authenticate, CollectController.createNewCollector);
     
-        app.get("/api/collecotrsbyuser/:username", authenticate, CollectController.findAllCollectorsByUser);
+        app.get("/api/collectorsbyuser/:username", authenticate, CollectController.findAllCollectorsByUser);
     
     
         app.get("/api/collectors/:id", CollectController.findOneCollector); 

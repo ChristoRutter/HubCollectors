@@ -15,6 +15,7 @@ const CollectorSchema = new mongoose.Schema({
         type: String,
         required: [true, "Describe your item"]
     }
+    
 
 
 }, {timestamps: true})
