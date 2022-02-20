@@ -20,16 +20,7 @@ const ItemList = (props) => {
             })
     }, [])
 
-    const deleteItem = (idFromBelow) => {
-        axios.delete(`http://localhost:8000/api/collectors/${idFromBelow}`)
-            .then((res) => {
-                console.log(res);
-                console.log(res.data);
-                setList(list.filter((item, index) => item._id !== idFromBelow))
-            })
-            .catch((err) => console.log(err))
-        
-    }
+    
     
 
     useEffect(() => {
@@ -68,40 +59,7 @@ const ItemList = (props) => {
 
 
     return (
-        // <div style={{ textAlign: "center" }}>
-        //     <header>
-        //         <h1>The Collection</h1>
-        //         <Link to={"/new"}>Add a New Item to the Collection Page</Link>
-        //         <button onClick={logout}>Logout</button>
-
-        //     </header>
-
-        //     {
-        //         list.map((item, index) => (
-        //             <div key={index}>
-
-                        
-                        
-        //                 <Link to={`/item/${item._id}`}>
-        //                     <p>{item.name}</p>
-        //                     <img src={item.image} alt="picture"
-                                
-                                
-        //                         />
-        //                 </Link>
-
-
-        //                 <div>
-        //                     <Link to={`/item/edit/${item._id}`}>Edit</Link>
-        //                     <button onClick={() => deleteItem(item._id)}>
-        //                         Delete
-        //                     </button>
-        //                 </div>
-
-        //             </div>
-        //         ))
-        //     }
-        // </div>
+       
 
         <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
@@ -133,9 +91,6 @@ const ItemList = (props) => {
                                       <h2 class="text-gray-900 title-font text-lg font-medium">{item.name}</h2>
                                       <div>
                                             <Link to={`/item/edit/${item._id}`}>Edit</Link>
-                                            <button class="mx-2 my-2 mb-12" onClick={() => deleteItem(item._id)}>
-                                                Delete
-                                            </button>
                                       </div>
                                     </div>
                                   </div>
