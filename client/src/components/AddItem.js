@@ -45,7 +45,7 @@ const AddItem = (props) =>{
 
             <Link  to={"/home"}>Return Home</Link>
             <header >
-                <h1 class="mt-6 text-center text-3xl font-extrabold text-gray-900 mb-8">Add a Item to your Collection</h1>
+                <h1 class="mt-6 text-center text-3xl font-extrabold text-gray-900 mb-8">Add a Item to Collection Page</h1>
                 
             </header>
 
