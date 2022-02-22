@@ -43,20 +43,7 @@ const ViewItem = (props) =>{
 
 
     return(
-        // <div>
-        //     <header>
-        //         <h1>{item.name}</h1>
-        //         <Link to={"/home"}>Return Home</Link>
-        //     </header>
-
-        //     <img src={item.image} alt="image" 
-        //     style={{width:"150px", height:"150px"}}/>
-        //     <p>{item.description}</p>
-
-        //     <button onClick={deleteItem}>
-        //         Delete {item.title}
-        //     </button>
-        // </div>
+        
 
 <section class="text-gray-700 body-font overflow-hidden bg-white">
 <div class="container px-5 py-24 mx-auto">
